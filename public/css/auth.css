@@ -1,0 +1,112 @@
+/* Authentication styles */
+.auth-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+/* Login and Register form styles */
+.login-form, .register-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(60, 73, 63, 0.1);
+    border: 1px solid rgba(201, 134, 134, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.login-form::before, .register-form::before {
+    content: '❤';
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: #C98686;
+    opacity: 0.5;
+}
+
+.login-form h2, .register-form h2 {
+    color: #3C493F;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.login-form input, .register-form input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #C98686;
+    border-radius: 20px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.login-form input:focus, .register-form input:focus {
+    outline: none;
+    border-color: #3C493F;
+    box-shadow: 0 0 0 2px rgba(60, 73, 63, 0.2);
+}
+
+.login-form button, .register-form button {
+    width: 100%;
+    background-color: #3C493F;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.login-form button:hover, .register-form button:hover {
+    background-color: #C98686;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(201, 134, 134, 0.3);
+}
+
+.login-form p, .register-form p {
+    text-align: center;
+    margin-top: 1rem;
+    color: #3C493F;
+}
+
+.login-form a, .register-form a {
+    color: #C98686;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.login-form a:hover, .register-form a:hover {
+    color: #3C493F;
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .auth-container {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+}
+
+.auth-switch {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.auth-switch a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.auth-switch a:hover {
+    text-decoration: underline;
+} 

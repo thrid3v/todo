@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shared Todo List</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/todo.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Shared Todo List</h1>
+            <div class="user-section">
+                <div class="login-form">
+                    <h2>Login</h2>
+                    <input type="email" id="loginEmail" placeholder="Email">
+                    <input type="password" id="loginPassword" placeholder="Password">
+                    <button onclick="login()">Login</button>
+                </div>
+                <div class="register-form">
+                    <h2>Register</h2>
+                    <input type="text" id="registerName" placeholder="Name">
+                    <input type="email" id="registerEmail" placeholder="Email">
+                    <input type="password" id="registerPassword" placeholder="Password">
+                    <button onclick="register()">Register</button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="todo-section">
+                <div class="todo-form">
+                    <h2>Add New Todo</h2>
+                    <input type="text" id="todoTitle" placeholder="Title">
+                    <textarea id="todoDescription" placeholder="Description"></textarea>
+                    <div class="user-search-container">
+                        <input type="text" id="userSearch" placeholder="Search user to assign to...">
+                        <div id="userSearchResults" class="user-search-results"></div>
+                    </div>
+                    <button onclick="addTodo()">Add Todo</button>
+                </div>
+
+                <div class="todo-list">
+                    <h2>My Todos</h2>
+                    <div id="assignedTodos" class="todo-group">
+                        <h3>Assigned to me</h3>
+                        <div id="assignedTodosList"></div>
+                    </div>
+                    <div id="createdTodos" class="todo-group">
+                        <h3>Created by me</h3>
+                        <div id="createdTodosList"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="/app.js"></script>
+</body>
+</html> 

@@ -1,0 +1,221 @@
+/* Header styles */
+header {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(60, 73, 63, 0.1);
+    margin-bottom: 2rem;
+    border: 1px solid rgba(201, 134, 134, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '❤';
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: #C98686;
+    opacity: 0.3;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #3C493F;
+    text-shadow: 2px 2px 4px rgba(60, 73, 63, 0.2);
+}
+
+/* User section styles */
+.user-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.login-form, .register-form {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(201, 134, 134, 0.2);
+    box-shadow: 0 4px 6px rgba(60, 73, 63, 0.1);
+}
+
+/* Todo section styles */
+.todo-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+.todo-form {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(60, 73, 63, 0.1);
+    height: fit-content;
+    border: 1px solid rgba(201, 134, 134, 0.2);
+}
+
+.todo-form textarea {
+    height: 100px;
+    resize: vertical;
+    border-radius: 20px;
+}
+
+/* Todo list styles */
+.todo-list {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(60, 73, 63, 0.1);
+    border: 1px solid rgba(201, 134, 134, 0.2);
+}
+
+.todo-group {
+    margin-bottom: 2rem;
+}
+
+.todo-item {
+    background: #FFF4EC;
+    padding: 1rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(201, 134, 134, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.todo-item::before {
+    content: '❤';
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 1rem;
+    color: #C98686;
+    opacity: 0.3;
+}
+
+.todo-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(201, 134, 134, 0.2);
+}
+
+.todo-item.completed {
+    background: #E7CFBC;
+    border-color: rgba(201, 134, 134, 0.3);
+}
+
+.todo-item.completed .todo-title {
+    text-decoration: line-through;
+    color: #C98686;
+}
+
+.todo-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #3C493F;
+}
+
+.todo-description {
+    color: #3C493F;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.todo-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #C98686;
+}
+
+.todo-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.todo-actions button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    border-radius: 15px;
+}
+
+.todo-actions .complete-btn {
+    background-color: #3C493F;
+}
+
+.todo-actions .complete-btn:hover {
+    background-color: #C98686;
+}
+
+.todo-actions .delete-btn {
+    background-color: #C98686;
+}
+
+.todo-actions .delete-btn:hover {
+    background-color: #3C493F;
+}
+
+/* User search styles */
+.user-search-container {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.user-search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid rgba(201, 134, 134, 0.2);
+    border-radius: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    box-shadow: 0 4px 6px rgba(60, 73, 63, 0.1);
+}
+
+.user-search-results.active {
+    display: block;
+}
+
+.user-search-result-item {
+    padding: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(201, 134, 134, 0.1);
+}
+
+.user-search-result-item:last-child {
+    border-bottom: none;
+}
+
+.user-search-result-item:hover {
+    background-color: #FFF4EC;
+}
+
+.user-search-result-item.selected {
+    background-color: #E7CFBC;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .todo-section {
+        grid-template-columns: 1fr;
+    }
+
+    .user-section {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+} 

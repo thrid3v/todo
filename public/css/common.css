@@ -1,0 +1,100 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #3C493F;
+    background-color: #FFF4EC;
+    background-image: 
+        radial-gradient(circle at 100% 100%, rgba(201, 134, 134, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 0% 0%, rgba(201, 134, 134, 0.1) 0%, transparent 50%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Common form elements */
+input, textarea, select {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #C98686;
+    border-radius: 20px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #3C493F;
+    box-shadow: 0 0 0 2px rgba(60, 73, 63, 0.2);
+}
+
+button {
+    background-color: #3C493F;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(60, 73, 63, 0.2);
+}
+
+button:hover {
+    background-color: #C98686;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(201, 134, 134, 0.3);
+}
+
+/* Typography */
+h1 {
+    font-size: 2.5rem;
+    color: #3C493F;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(60, 73, 63, 0.2);
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #3C493F;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: #C98686;
+    margin-bottom: 0.8rem;
+}
+
+/* Common card styles */
+.card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(60, 73, 63, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(201, 134, 134, 0.2);
+}
+
+/* Common spacing */
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; } 
